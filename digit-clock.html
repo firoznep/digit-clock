@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Clock</title>
+
+    <!-- let bring clock container to center of screen -->
+    <style>
+        .clock-container {
+            background-color: #ddd;
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* give some style to our clock */
+        .digit-clock {
+            background-color: #999;
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 3rem;
+
+            box-shadow: 0 0 1rem #222;
+
+            /* also rotate back */
+            transform: rotate(-10deg);
+
+            /* let rotate smooth */
+            transition: transform .5s;
+        }
+
+        /* active class style */
+        .active {
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- create clock element and container -->
+    <div class="clock-container">
+        <div class="digit-clock"></div>
+    </div>
+
+
+    <!-- write javascript code here -->
+    <script>
+        // frist get digit-clock element
+        let rotate_clock = document.querySelector('.digit-clock');
+
+        // create a function
+        function rotateFunc() {
+
+            // create time variable
+            let our_time = new Date().toLocaleTimeString();
+
+            // set time to clock
+            rotate_clock.innerHTML = our_time;
+
+            // rotate clock
+            // this will add and remove active class to clock let see
+            rotate_clock.classList.toggle('active');
+        }
+
+        // set 1 second time interval
+        setInterval(rotateFunc, 1000);
+    </script>
+</body>
+
+</html>
