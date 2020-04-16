@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner Card</title>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+
+        perspective: 1500px;
+
+        background-color: rgb(0, 100, 0);
+      }
+      /* cards spinner style */
+      .cards-spinner {
+        /* short hand properties */
+        animation: spinner 8s linear infinite;
+
+        transform-style: preserve-3d;
+
+        display: grid;
+      }
+      @keyframes spinner {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      /* set cards width some styles */
+      .cards {
+        width: 15rem;
+        background-color: rgba(255, 0, 0, 0.5);
+        padding-left: 5rem;
+
+        /* all cards in same row and columns */
+        grid-area: 1 / 1;
+
+        border-radius: 1rem;
+        box-shadow: 0 0 10px black;
+      }
+
+      /* cards body style */
+      .card-body {
+        background-color: #ddd;
+        padding: 1rem;
+        color: #ff0000;
+
+        border-radius: 0 1rem 1rem 0;
+        text-align: center;
+      }
+      /* cards button style */
+      .card-btn {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 0.5rem;
+      }
+
+      .card-1 {
+        transform: rotateY(0) translateX(160px);
+      }
+      .card-2 {
+        transform: rotateY(-60deg) translateX(160px);
+      }
+      .card-3 {
+        transform: rotateY(-120deg) translateX(160px);
+      }
+      .card-4 {
+        transform: rotateY(-180deg) translateX(160px);
+      }
+      .card-5 {
+        transform: rotateY(-240deg) translateX(160px);
+      }
+      .card-6 {
+        transform: rotateY(-300deg) translateX(160px);
+      }
+
+      /* stop animation when hover over the mouse */
+      .cards-spinner:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cards-spinner">
+        <!-- card 1 -->
+        <div class="cards card-1">
+          <div class="card-body">
+            <h1>Card 1</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="cards card-2">
+          <div class="card-body">
+            <h1>Card 2</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="cards card-3">
+          <div class="card-body">
+            <h1>Card 3</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="cards card-4">
+          <div class="card-body">
+            <h1>Card 4</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="cards card-5">
+          <div class="card-body">
+            <h1>Card 5</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+
+        <!-- card 6 -->
+        <div class="cards card-6">
+          <div class="card-body">
+            <h1>Card 6</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              libero sit, adipisci commodi inventore et. Nisi, voluptatibus
+              dolores ducimus commodi quae laboriosam blanditiis. Harum est
+              impedit, qui sunt quas modi?
+            </p>
+            <button class="card-btn">Click Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
